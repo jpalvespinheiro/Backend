@@ -1,0 +1,129 @@
+# Dashboard API
+
+## Descrição do Projeto
+
+Este projeto é uma API desenvolvida para fornecer dados de criação de contas e fornecedores.
+
+## Índice
+
+1. [Tecnologias Utilizadas](#tecnologias-utilizadas)
+2. [Instalação](#instalação)
+3. [Uso](#uso)
+4. [Documentação da API](#documentação-da-api)
+   - [Endpoints](#endpoints)
+5. [Tratamento de Erros](#tratamento-de-erros)
+
+## Tecnologias Utilizadas
+
+- **Node.js**: Ambiente de execução para JavaScript no lado do servidor.
+- **Express**: Framework web para Node.js que facilita a construção de APIs.
+- **MySQL**: Sistema de gerenciamento de banco de dados utilizado para armazenar os dados.
+- **Swagger**: Para documentação da API.
+
+## Instalação
+
+Siga os passos abaixo para instalar e configurar o projeto:
+
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/seu-usuario/nome-do-repositorio.git
+   cd nome-do-repositorio
+
+2. instale as dependências usando ---> npm install
+
+3. Digite no terminal npm run dev para o servidor iniciar.
+
+
+## Uso
+
+1. A API pode ser testada utilizando o Postman ou qualquer ferramenta similar. Para interagir com os endpoints, você pode usar as rotas especificadas na seção de documentação da API.
+
+## Documentação da API
+
+Api de Fornecedores 
+
+GET api/fornecedores
+
+http://localhost:3000/api/fornecedores
+
+POST api/fornecedores
+
+http://localhost:3000/api/fornecedores
+
+{
+  "nome": "HAWAB TECNOLOGIAS E EQUIPAMENTO"
+}
+
+PUT api/fornecedores
+
+http://localhost:3000/api/fornecedores/:id
+
+{
+  "nome": "Novo Nome do Fornecedor"
+}
+
+
+DELETE api/fornecedores
+
+http://localhost:3000/api/fornecedores/:id
+
+
+
+API de contas 
+
+GET api/contas
+
+http://localhost:3000/api/contas
+
+GET by id  api/contas 
+
+http://localhost:3000/api/contas/id
+
+POST api/contas
+
+http://localhost:3000/api/contas
+
+{
+  "fornecedor": "HAWBA TECNOLOGIAS E EQUIPAMENTO",
+  "tipoPagamento": "Contas a Pagar",
+  "meioPagamento": "Boleto",
+  "dataVencimento": "2024-10-01",
+  "valor": 3240.50
+}
+
+
+PUT api/contas
+
+http://localhost:3000/api/contas/id
+
+{
+  "fornecedor": "HAWBA TECNOLOGIAS E EQUIPAMENTO",
+  "tipoPagamento": "Contas a Pagar",
+  "meioPagamento": "Boleto",
+  "dataVencimento": "2024-10-01",
+  "valor": 3240.50
+}
+
+
+DELETE api/contas/id
+
+http://localhost:3000/api/contas
+
+## Tratamento de Erros
+
+Todos os endpoints implementam tratamento de erros para garantir que mensagens úteis sejam retornadas em caso de falhas. Erros comuns incluem:
+
+400 Bad Request: Para requisições malformadas.
+404 Not Found: Quando o recurso solicitado não é encontrado.
+500 Internal Server Error: Para erros inesperados no servidor. 
+
+## Testes
+
+1. Basta rodar no terminal
+
+    npm run test
+
+## Contribuição
+
+Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou pull requests.
+
